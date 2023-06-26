@@ -1,14 +1,28 @@
-
 import './App.css'
-import Header from './components/Header/Header'
+
+import {
+  createBrowserRouter,
+  RouterProvider
+} from "react-router-dom";
+import Header from './components/Header/Header';
+import Login from './pages/Login/Login';
 
 function App() {
 
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <Header/>
+    },
+    {
+      path:'/login',
+      element: <Login/>
+    }
+  ])
+
   return (
     <>
-      <div>
-        <Header/>
-      </div>
+      <RouterProvider  router={router}/>
     </>
   )
 }

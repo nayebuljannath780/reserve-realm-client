@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import logo from '../../images/logo.png'
 
 const Header = () => {
@@ -21,17 +22,17 @@ const Header = () => {
 
                     </button>
                 </div>
-                <div className='flex gap-2 items-center rounded-full border border-gray-300 py-2 px-4'>
+                <Link to='/login' className='flex gap-2 items-center rounded-full border border-gray-300 py-2 px-4'>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-6 h-6">
                         <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                     </svg>
-                    <div className="user">
+                    <div className="border border-gray-300 rounded-full">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
                             <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
                         </svg>
 
                     </div>
-                </div>
+                </Link>
             </div>
         </div>
 
