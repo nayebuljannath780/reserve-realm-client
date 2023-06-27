@@ -4,25 +4,37 @@ import {
   createBrowserRouter,
   RouterProvider
 } from "react-router-dom";
-import Header from './components/Header/Header';
+import Main from './layout/Main';
+import Index from './pages/Index/Index';
 import Login from './pages/Login/Login';
+import Register from './pages/Register/Register';
 
 function App() {
 
   const router = createBrowserRouter([
     {
       path: '/',
-      element: <Header/>
-    },
-    {
-      path:'/login',
-      element: <Login/>
+      element: <Main />,
+      children: [
+        {
+          path: '/',
+          element: <Index />
+        },
+        {
+          path: '/login',
+          element: <Login />
+        },
+        {
+          path: '/register',
+          element: <Register />
+        }
+      ]
     }
   ])
 
   return (
     <>
-      <RouterProvider  router={router}/>
+      <RouterProvider router={router} />
     </>
   )
 }
