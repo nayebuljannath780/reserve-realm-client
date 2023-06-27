@@ -8,6 +8,10 @@ import Main from './layout/Main';
 import Index from './pages/Index/Index';
 import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
+import axios from 'axios';
+
+
+axios.defaults.baseURL = 'http://localhost:8080';
 
 function App() {
 
